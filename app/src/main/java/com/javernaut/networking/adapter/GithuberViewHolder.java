@@ -25,6 +25,8 @@ public class GithuberViewHolder extends RecyclerView.ViewHolder {
 
     public void bindTo(Githuber githuber) {
         userNameView.setText(githuber.getLogin());
-        Picasso.get().load(githuber.getAvatarUrl()).into(avatarView);
+        Picasso.get()
+                .load(githuber.getAvatarUrl())
+                .into(avatarView);
     }
 }
