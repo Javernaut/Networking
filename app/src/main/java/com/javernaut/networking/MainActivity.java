@@ -12,6 +12,7 @@ import android.os.Bundle;
 import com.javernaut.networking.adapter.GithubersAdapter;
 import com.javernaut.networking.model.Githuber;
 import com.javernaut.networking.networking.okhttp.NetworkingWithOkHttp;
+import com.javernaut.networking.networking.retrofit.NetworkingWithRetrofit;
 
 import java.util.Collections;
 import java.util.List;
@@ -40,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
     @WorkerThread
     private List<Githuber> executeRequest() {
 //        return Collections.emptyList();
-        return NetworkingWithOkHttp.makeRequest();
-//        return NetworkingWithRetrofit.makeRequest();
+//        return NetworkingWithOkHttp.makeRequest();
+        return NetworkingWithRetrofit.makeRequest();
     }
 
     // The class for a background task
